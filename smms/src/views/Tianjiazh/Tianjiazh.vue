@@ -111,8 +111,8 @@ export default {
           }
 
           //发送ajax请求 发数据给后端
-          this.axios.post("http://192.168.20.200:3000/users/tianjiazh",qs.stringify(params), {
-              headers: { "Content-Type": "application/x-www-form-urlencoded" } // 设置请求头
+          this.axios.post("http://127.0.0.1:3000/users/tianjiazh",qs.stringify(params), {
+              "headers": { "Content-Type": "application/x-www-form-urlencoded" } // 设置请求头
             })
             .then(response => {
               if (response.data.rstCode === 1) {

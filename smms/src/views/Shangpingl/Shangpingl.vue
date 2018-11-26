@@ -28,50 +28,50 @@
             <el-button type="primary" @click="onSubmit">查询</el-button>
           </el-form-item>
         </el-form>
+
+        <el-row :gutter="20">
+          <div class="text item">
+            <!-- 表格 -->
+            <el-table :data="tableData" style="width: 100%">
+              <el-table-column prop="yonghuming" label="商品条形码">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="商品名称">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="所属分类">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="售价（元）">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="促销价（元）">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="市场价（元）">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="库存">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="库存总额（元）">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="库存总额（元）">
+              </el-table-column>
+              <el-table-column prop="yonghuzu" label="促销总额（元）">
+              </el-table-column>
+              <el-table-column label="操作">
+                <template slot-scope="scope">
+                  <el-button size="mini" type="primary" @click="handleEdit(scope.row.id)">
+                    <i class="el-icon-edit"></i>修改</el-button>
+                  <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)">
+                    <i class="el-icon-delete"></i>删除</el-button>
+                </template>
+              </el-table-column>
+
+              <div class="block">
+                <span class="demonstration">页数较少时的效果</span>
+                <el-pagination layout="prev, pager, next" :total="50">
+                </el-pagination>
+              </div>
+
+            </el-table>
+          </div>
+        </el-row>
       </el-card>
-
-      <el-row :gutter="20">
-        <div class="text item">
-          <!-- 表格 -->
-          <el-table :data="tableData" style="width: 100%">
-            <el-table-column prop="yonghuming" label="商品条形码">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="商品名称">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="所属分类">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="售价（元）">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="促销价（元）">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="市场价（元）">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="库存">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="库存总额（元）">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="库存总额（元）">
-            </el-table-column>
-            <el-table-column prop="yonghuzu" label="促销总额（元）">
-            </el-table-column>
-            <el-table-column label="操作">
-              <template slot-scope="scope">
-                <el-button size="mini" type="primary" @click="handleEdit(scope.row.id)">
-                  <i class="el-icon-edit"></i>修改</el-button>
-                <el-button size="mini" type="danger" @click="handleDelete(scope.row.id)">
-                  <i class="el-icon-delete"></i>删除</el-button>
-              </template>
-            </el-table-column>
-
-            <div class="block">
-              <span class="demonstration">页数较少时的效果</span>
-              <el-pagination layout="prev, pager, next" :total="50">
-              </el-pagination>
-            </div>
-
-          </el-table>
-        </div>
-      </el-row>
     </el-main>
     <!-- 尾部 -->
     <Wei></Wei>
